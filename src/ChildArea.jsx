@@ -6,6 +6,13 @@ const style = {
 
 export const ChildArea = (props) => {
   const { open } = props;
+  // 意図的に再レンダリングの際に負荷をかける
+  const data = [...Array(2000).keys()];
+  data.forEach(() => {
+    console.log("...");
+  });
+  console.log(data);
+
   return (
     <>
       {open ? (
