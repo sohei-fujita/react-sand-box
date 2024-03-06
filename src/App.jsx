@@ -1,6 +1,7 @@
 import { useState, useCallback } from "react";
 import "./styles.css";
 import { ChildArea } from "./ChildArea";
+import { CssModules } from "./components/CssModules";
 
 export default function App() {
   const [text, setText] = useState("");
@@ -18,6 +19,7 @@ export default function App() {
 
   return (
     <div className="App">
+      <CssModules />
       <input value={text} onChange={onChangeText} />
       <br />
       <br />
