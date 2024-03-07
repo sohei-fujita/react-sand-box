@@ -2,6 +2,7 @@ import { useState, useCallback } from "react";
 import "./styles.css";
 import { ChildArea } from "./ChildArea";
 import { CssModules } from "./components/CssModules";
+import { StyledJsx } from "./components/StyledJsx";
 
 export default function App() {
   const [text, setText] = useState("");
@@ -20,6 +21,7 @@ export default function App() {
   return (
     <div className="App">
       <CssModules />
+      <StyledJsx />
       <input value={text} onChange={onChangeText} />
       <br />
       <br />
