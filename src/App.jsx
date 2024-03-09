@@ -3,6 +3,7 @@ import "./styles.css";
 import { ChildArea } from "./ChildArea";
 import { CssModules } from "./components/CssModules";
 import { StyledJsx } from "./components/StyledJsx";
+import { Emotion } from "./components/Emotion";
 
 export default function App() {
   const [text, setText] = useState("");
@@ -20,6 +21,7 @@ export default function App() {
 
   return (
     <div className="App">
+      <Emotion />
       <CssModules />
       <StyledJsx />
       <input value={text} onChange={onChangeText} />
