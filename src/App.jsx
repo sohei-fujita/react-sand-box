@@ -1,31 +1,14 @@
 import { BrowserRouter, Link } from "react-router-dom";
 import { useState, useCallback } from "react";
 import { Router } from "./router/Router";
+import { PrimaryButton } from "./components/atoms/button/PrimaryButton";
+import { SecondaryButton } from "./components/atoms/button/SecondaryButton";
 
 export default function App() {
-  const [text, setText] = useState("");
-  const [open, setOpen] = useState(false);
-
-  const onChangeText = (e) => {
-    setText(e.target.value);
-  };
-
-  const onClickOpen = () => {
-    setOpen(!open);
-  };
-
-  const onClickClose = useCallback(() => setOpen(false), [setOpen]);
-
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Link to="/">Home</Link>
-        <br />
-        <Link to="/page1">Page1</Link>
-        <br />
-        <Link to="/page2">Page2</Link>
-      </div>
-      <Router />
-    </BrowserRouter>
+    <div className="App">
+      <PrimaryButton>テスト</PrimaryButton>
+      <SecondaryButton>検索</SecondaryButton>
+    </div>
   );
 }
