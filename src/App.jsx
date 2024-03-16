@@ -6,6 +6,18 @@ import { SecondaryButton } from "./components/atoms/button/SecondaryButton";
 import { SearchInput } from "./components/molecures/SearchInput";
 import { UserCard } from "./components/organisms/user/UserCard";
 
+const user = {
+  name: "fujita",
+  image:
+    "https://source.unsplash.com/brown-short-coated-dog-in-orange-hoodie-oU6KZTXhuvk",
+  email: "12345@example.com",
+  phone: "090-11111-1111",
+  company: {
+    name: "test company",
+  },
+  website: "https://google.com",
+};
+
 export default function App() {
   return (
     <div className="App">
@@ -13,7 +25,7 @@ export default function App() {
       <SecondaryButton>検索</SecondaryButton>
       <br />
       <SearchInput />
-      <UserCard />
+      <UserCard user={user} />
     </div>
   );
 }
