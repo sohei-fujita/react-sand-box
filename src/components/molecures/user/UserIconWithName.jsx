@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const UserIconWithName = (props) => {
   const { image, name } = props;
   const context = useContext(UserContext);
+
   return (
     <SContainer>
       <SImg height={160} width={160} src={image} alt={name} />
