@@ -9,11 +9,14 @@ import { HeaderOnly } from "./components/templates/HeaderOnly";
 import { DefaultLayout } from "./components/templates/DefaultLayout";
 import "./styles.css";
 import { UserProvider } from "./providers/UserProvider";
+import { RecoilRoot } from "recoil";
 
 export default function App() {
   return (
-    <UserProvider>
-      <Router />
-    </UserProvider>
+    <RecoilRoot>
+      <UserProvider>
+        <Router />
+      </UserProvider>
+    </RecoilRoot>
   );
 }

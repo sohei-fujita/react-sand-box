@@ -5,7 +5,6 @@ export const UserProvider = (props) => {
   const { children } = props;
 
   const [userInfo, setUserInfo] = useState(null);
-  const contextName = "fuji";
 
   return (
     <UserContext.Provider value={{ userInfo, setUserInfo }}>
