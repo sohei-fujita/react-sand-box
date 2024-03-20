@@ -4,8 +4,16 @@ import { UserIconWithName } from "../../molecures/user/UserIconWithName";
 
 export const UserCard = (props) => {
   const { user } = props;
+  const onClickUsers = () => {
+    axios;
+  };
+  const onClickUser1 = () => {
+    alert();
+  };
   return (
     <Card>
+      <button onClick={onClickUsers}>users</button>
+      <button onClick={onClickUser1}>id=1のuser</button>
       <UserIconWithName image={user.image} name={user.name} />
       <SDl>
         <dt>メール</dt>
